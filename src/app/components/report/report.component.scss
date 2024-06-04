@@ -1,0 +1,37 @@
+.container{
+    background-color: #ccc;
+    margin: 2em;
+    border: 1px solid black;
+    border-radius: 1em;
+    box-shadow: 0 0 0.8em 0;
+}
+.stock-table {
+    margin:1em;
+  }
+  .titulo{
+    margin: auto;
+    color: #2E81C5;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+  }
+  td{
+    color: black;
+    font-size: medium;
+  }
+  

@@ -1,0 +1,21 @@
+<app-header/>
+<div class="container">
+    <div class="login-form">
+        <div class="img-top">
+            <img ngSrc="assets/logo.png" width="199" height="171">
+        </div>
+        <div class="text">
+            <h2>Cadastre seu produto</h2>
+        </div>
+        <div class="container">
+            <form>
+                <div class="input-field">
+                    <input [(ngModel)]="product.name"  name="Produto" type="text" placeholder="Produto">
+                </div>
+            </form>
+            <div class="box-btn">
+                <input (click)="registerProduct()" type="button" value="Adicionar" class="button-entrar">
+            </div>
+        </div>
+    </div>
+</div>

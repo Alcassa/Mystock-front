@@ -1,0 +1,24 @@
+<app-header/>
+<div class="container">
+    <div class="login-form">
+        <div class="img-top">
+            <img ngSrc="assets/logo.png" width="199" height="171">
+        </div>
+        <div class="text">
+            <h2>Adicione a quantidade desejada</h2>
+        </div>
+        <div class="container">
+            <form>
+                <div class="input-field">
+                    <input [(ngModel)]="product.id"  name="id" type="text" placeholder="Código">
+                </div>
+             <div class="input-field">
+                    <input [(ngModel)]="product.quantity" name="quantidade" type="text" placeholder="quantidade">
+            </div>
+            </form>
+            <div class="box-btn">
+                <input (click)="addingProduct()" type="button" value="Adicionar" class="button-entrar">
+            </div>
+        </div>
+    </div>
+</div>

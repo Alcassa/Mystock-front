@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="stock-table">
+        <div class="titulo">
+            <h2>Saldo do Estoque</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Descrição</th>
+              <th>Saldo</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (product of _products ; track _products) {
+            <tr >
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.quantity }}</td>
+            </tr>
+        }
+          </tbody>
+        </table>
+    </div>
+</div>

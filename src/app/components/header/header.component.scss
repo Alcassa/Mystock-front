@@ -1,0 +1,40 @@
+*{
+    margin: 0em;
+    padding: 0em;
+}
+nav{
+    background-color: #2E81C5;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    margin-left: 1em;
+}
+li{
+    margin-left: 1em;
+    padding: 1em;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    background-color: #2E81C5;
+}
+.dropdown-menu{
+    position: absolute;
+    border: 0.6px solid black;
+    box-shadow: 0 0 0.6em 0;
+    background-color: white;
+    display: none;
+    margin-top: 1em;
+    padding: 0.5em;
+}
+.dropdown-menu a{
+    display: block;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}

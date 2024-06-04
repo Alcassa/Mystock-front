@@ -1,0 +1,30 @@
+<app-header/>
+<div class="container">
+    <div class="stock-table">
+        <div class="titulo">
+            <h2>Relatório de Movimentação</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Movimentação</th>
+              <th>Quantidade</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (mov of movement ; track movement) {
+            <tr>
+              <td>{{ mov.product?.id}}</td>
+              <td>{{ mov.product?.name }}</td>
+              <td>{{ mov.type }}</td>
+              <td>{{ mov.quantity }}</td>
+              <td>{{ mov.data | date:'dd/MM/yyyy  HH:mm:ss' }}</td>
+            </tr>
+        }
+          </tbody>
+        </table>
+    </div>
+</div>

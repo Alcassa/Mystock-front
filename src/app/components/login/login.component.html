@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="login-form">
+        <div class="img-top">
+            <img ngSrc="assets/logo.png" width="199" height="171">
+        </div>
+        <div class="text">
+            <h2>Acesse sua conta</h2>
+        </div>
+        <div class="container">
+            <form>
+                <div class="input-field">
+                    <img ngSrc="assets/login.png" width="20" height="21">
+                    <input [(ngModel)]="user.name"  name="login" type="text" placeholder="login">
+                </div>
+             <div class="input-field">
+                    <img  ngSrc="assets/senha.png" width="20" height="21" class="">
+                    <input [(ngModel)]="user.password" name="senha" type="password" placeholder="senha">
+            </div>
+            </form>
+            <div class="box-btn">
+                <input (click)="getLogin()" type="button" value="Entrar" class="button-entrar">
+            </div>
+        </div>
+    </div>
+</div>

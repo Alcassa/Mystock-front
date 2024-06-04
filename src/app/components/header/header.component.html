@@ -1,0 +1,18 @@
+<header>
+    <nav>
+        <ul class="list">
+            <li class="botoes"><a (click)="navigateToHome()">Inicio</a></li>
+            <li class="dropdown">
+                <a>Estoque ▾</a>
+                <div class="dropdown-menu">
+                    <a (click)="navigateToRegister()">Cadastrar</a>
+                    <a (click)="navigateToAddingProduct()">Adicionar</a>
+                    <a (click)="navigateToWithDrawProduct()">Retirar</a>
+                    <a (click)="navigateToStock()">Saldo em estoque</a>
+                </div>
+            </li>
+            <li class="botoes"><a (click)="navigateToReport()" >Relatório</a></li>
+            <li class="botoes"><a  > Sair</a></li>
+        </ul>
+    </nav>
+</header>
