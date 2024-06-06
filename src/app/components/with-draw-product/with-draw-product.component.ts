@@ -23,9 +23,20 @@ export class WithDrawProductComponent {
   
   withDrawProduct(){
     this.productService.withDrawProduct(this.product)
-    .subscribe(result=>this.showSuccess())
-  }
+    .subscribe(
+      (result)=>{
+        this.showSuccess()
+      },
+      (err)=>{
+        this.showError()
+    }
+  )
+  this.router.navigate(['/home'])
+}
   showSuccess() {
     this.toastr.success(`Retirado com sucesso.`);
+  }
+  showError(){
+    this.toastr.error("Não foi possivel retirar")
   }
 }

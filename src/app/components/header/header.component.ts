@@ -29,4 +29,7 @@ export class HeaderComponent {
   navigateToReport(){
     this.router.navigate(['home/relatorio'])
   }
+  navigateToLogin(){
+    this.router.navigate(['/login'])
+  }
 }

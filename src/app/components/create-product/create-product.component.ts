@@ -24,12 +24,18 @@ export class CreateProductComponent {
   registerProduct(){
     this.product.quantity=0
     this.productService.registerProduct(this.product)
-    .subscribe(result=>{
+    .subscribe((result)=>{
       this.showSuccess(this.product.name==undefined ? '' : this.product.name)
-      this.router.navigate(['/home '])
-    })
+    },
+  (err)=>{
+    this.showError()
+  })
+    this.router.navigate(['/home '])
   }
   showSuccess(message:string) {
     this.toastr.success(`${message} cadastrado com sucesso.`);
+  }
+  showError(){
+    this.toastr.error("Não foi possivel cadastrar")
   }
 }

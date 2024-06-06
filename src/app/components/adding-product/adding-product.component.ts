@@ -19,17 +19,23 @@ export class AddingProductComponent {
 
 product:Product=new Product()
 constructor(private productService:ProductService,private toastr: ToastrService,public router:Router){}
-
-
-addingProduct(){
-  this.productService.addingProduct(this.product)
-  .subscribe(result=>{
-    this.showSuccess()
-  })
-  this.router.navigate(['/home'])
+  addingProduct(){
+    this.productService.addingProduct(this.product)
+    .subscribe(
+      (result)=>{
+      this.showSuccess()
+    },
+    (err)=>{
+      this.showError()
+    }
+  )
+    this.router.navigate(['/home'])
 }
-showSuccess() {
-  this.toastr.success(`adicionado com sucesso.`);
-}
+  showSuccess() {
+    this.toastr.success(`adicionado com sucesso.`);
+  }
+  showError(){
+    this.toastr.error("Não foi possivel adicionar a quantidade")
+  }
 
 }
