@@ -30,7 +30,7 @@ export class CreateProductComponent {
   (err)=>{
     this.showError()
   })
-    this.router.navigate(['/home '])
+    this.router.navigate(['/home'])
   }
   showSuccess(message:string) {
     this.toastr.success(`${message} cadastrado com sucesso.`);

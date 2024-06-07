@@ -32,7 +32,7 @@ constructor(private productService:ProductService,private toastr: ToastrService,
     this.router.navigate(['/home'])
 }
   showSuccess() {
-    this.toastr.success(`adicionado com sucesso.`);
+    this.toastr.success(`Adicionado com sucesso.`);
   }
   showError(){
     this.toastr.error("Não foi possivel adicionar a quantidade")
